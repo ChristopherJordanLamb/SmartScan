@@ -1,5 +1,6 @@
 import subprocess
 import os
+import shutil
 
 def run_command(command):
     try:
@@ -27,6 +28,16 @@ def get_video_path():
             print(f"Error: The video file at '{video_path}' was not found. Please provide the correct path.\n")
 
 
+def create_or_replace_directory(directory):
+    # If the directory exists, remove it
+    if os.path.exists(directory):
+        print(f"Directory '{directory}' already exists. Replacing it with an empty folder.")
+        shutil.rmtree(directory)  # Remove the existing directory and its contents
+    # Create a new empty directory
+    os.makedirs(directory)
+    print(f"Created an empty directory: {directory}\n")
+
+
 def main():
     # Step 1: Get video path input from user and check if file exists
     video_path = get_video_path()
@@ -34,16 +45,16 @@ def main():
     if video_path is None:
         return  # Exit the script if the user presses 'q'
 
-    # Step 2: Create the 'image_360' directory
-    run_command("mkdir image_360")
+    # Step 2: Create or replace the 'image_360' directory
+    create_or_replace_directory("image_360")
 
     # Step 3: Extract frames from the 360 video using ffmpeg
     fps = 3  # Example: Adjust the fps value as needed
     output_folder = "./image_360"
     run_command(f"ffmpeg -i {video_path} -vf fps={fps} -qscale:v 1 {output_folder}/image_%04d.jpg")
 
-    # Step 4: Create the 'images' directory
-    run_command("mkdir images")
+    # Step 4: Create or replace the 'images' directory
+    create_or_replace_directory("images")
 
     # Step 5: Run Meshroom's aliceVision_utils_split360Images
     run_command("./Meshroom-2021.1.0-av2.4.0-centos7-cuda10.2/aliceVision/bin/aliceVision_utils_split360Images "
