@@ -66,6 +66,9 @@ To add more objects, currently this must be done manually. In the "Prefabs" fold
 
 # References:
 Chair Model - https://assetstore.unity.com/packages/3d/props/furniture/colorable-office-chair-104874
+
 TV Model - https://assetstore.unity.com/packages/3d/props/electronics/tv-set-26193
+
 YBot Model - https://www.mixamo.com/
+
 YBot Animation - https://www.mixamo.com/ (Specifically - Idle, Left Strafe, Right Strafe)
