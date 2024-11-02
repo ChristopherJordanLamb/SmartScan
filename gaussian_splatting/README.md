@@ -7,6 +7,8 @@
 ## 2. Setup Environment
 - Place the downloaded Meshroom folder and the `gaussian-splatting-windows.py` file (found in the Gaussian Splatting folder on Gitea) in the same directory.
 
+![alt text](https://gitea-cert.cdirmit.co/2024S2_Projects/SmartScan24/_edit/gaussian-splatting/gaussian_splatting/Readme-Images/samefolder.png?raw=true)
+
 ## 3. Run the Script
 - Execute the `gaussian-splatting-windows.py` script and provide the path to your video when prompted in the terminal.
 
