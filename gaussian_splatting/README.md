@@ -1,22 +1,21 @@
 # Gaussian Splatting Steps
-##Install Required Software
 
-Install COLMAP for Windows.
-Install Meshroom version 2021.1.1 for Windows.
-##Setup Environment
+## 1. Install Required Software
+- Install COLMAP for Windows.
+- Install Meshroom version 2021.1.1 for Windows.
 
-Place the downloaded Meshroom folder and the gaussian-splatting-windows.py file (found in the Gaussian Splatting folder on Gitea) in the same directory.
-Run the Script
+## 2. Setup Environment
+- Place the downloaded Meshroom folder and the `gaussian-splatting-windows.py` file (found in the Gaussian Splatting folder on Gitea) in the same directory.
 
-Execute the gaussian-splatting-windows.py script and provide the path to your video when prompted in the terminal.
-##Upload Data
+## 3. Run the Script
+- Execute the `gaussian-splatting-windows.py` script and provide the path to your video when prompted in the terminal.
 
-Upload the generated “Data” folder to your Google Drive.
-##Training
+## 4. Upload Data
+- Upload the generated “Data” folder to your Google Drive.
 
-Open the training.ipynb notebook (found in the Gaussian Splatting folder on Gitea) on Google Colab with T4 GPU runtime (free) and run all cells.
-Connect to your Google Drive when prompted, then provide the path to the “Data” folder.
-Download Output
+## 5. Training
+- Open the `training.ipynb` notebook (found in the Gaussian Splatting folder on Gitea) on Google Colab with T4 GPU runtime (free) and run all cells.
+- Connect to your Google Drive when prompted, then provide the path to the “Data” folder.
 
-After training, locate and download your point cloud folder from gaussian-splatting/output/.
-
+## 6. Download Output
+- After training, locate and download your point cloud folder from `gaussian-splatting/output/`.
