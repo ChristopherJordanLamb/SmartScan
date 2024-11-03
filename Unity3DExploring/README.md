@@ -63,3 +63,12 @@ Location information follows:
 
 Used ChatGPT to combine the Animation and Movement scripts to work with fixed target location and decrease complexity of using multiple files to handle the events.
 To add more objects, currently this must be done manually. In the "Prefabs" folder, there are existing set game objects for currently: Person (yBot), TV, and Chair. Given the CSV file, you just need to change in "MaybeNewMovement.cs" component the "Object name" to a given object name in the csv. See Sample Scene and click on any of the existing game objects (TV, chair or personSetCSV).
+
+# References:
+Chair Model - https://assetstore.unity.com/packages/3d/props/furniture/colorable-office-chair-104874
+
+TV Model - https://assetstore.unity.com/packages/3d/props/electronics/tv-set-26193
+
+YBot Model - https://www.mixamo.com/
+
+YBot Animation - https://www.mixamo.com/ (Specifically - Idle, Left Strafe, Right Strafe)
